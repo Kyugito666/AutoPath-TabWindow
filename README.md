@@ -5,46 +5,70 @@ Sebuah skrip Python sederhana namun kuat untuk mengelola dan membuka banyak dire
 Dikembangkan oleh **Kyugito666**.
 
 ## ✨ Fitur Utama
-- **Menu Berbasis Teks**: Interaksi yang cepat dan jelas menggunakan input angka.
-- **Pemeriksa Path Otomatis**: Secara cerdas memeriksa semua path di `paths.txt` dan otomatis menghapus direktori yang tidak valid atau tidak ditemukan.
-- **Manajemen Cerdas**: Memisahkan direktori "Token" dan "PrivateKey" untuk dibuka di jendela PowerShell yang berbeda.
-- **Startup Cepat**: Tanpa *library* UI yang berat, program ini berjalan seketika.
-- **Instalasi Mudah**: Semua dependensi dapat diinstal dengan satu skrip sederhana.
+* **Menu Berbasis Teks**: Interaksi yang cepat dan jelas menggunakan input angka.
+* **Pemeriksa Path Otomatis**: Secara cerdas memeriksa semua path di `paths.txt` dan otomatis menghapus direktori yang tidak valid.
+* **Manajemen Cerdas**: Memisahkan direktori "Token" dan "PrivateKey" untuk dibuka di jendela PowerShell yang berbeda.
+* **Startup Cepat**: Tanpa *library* UI yang berat, program ini berjalan seketika.
+* **Instalasi Mudah**: Dilengkapi skrip instalasi otomatis untuk Windows dan Linux/macOS.
 
 ---
 
-## 🚀 Instalasi
+## 🚀 Instalasi & Persiapan
 
-Pastikan Anda memiliki Python yang terinstal di sistem Anda.
+Pastikan Anda memiliki **Git** dan **Python 3** yang terinstal di sistem Anda.
 
-### Cara 1: Menggunakan Skrip (Direkomendasikan untuk Windows)
-Cukup klik dua kali file `install.bat`. Skrip ini akan otomatis menginstal *package* yang dibutuhkan.
+### Langkah 1: Clone & Masuk ke Direktori
+Buka terminal Anda dan jalankan perintah-perintah berikut satu per satu:
 
-### Cara 2: Manual via `pip`
-Buka terminal atau PowerShell di folder proyek dan jalankan perintah berikut:
 ```bash
-pip install -r requirements.txt
+git clone https://github.com/Kyugito666/AutoPath-TabWindow.git
+cd AutoPath-TabWindow
 ```
+
+### Langkah 2: Instalasi Dependensi
+Setelah berada di dalam folder proyek, instal *package* yang dibutuhkan dengan cara yang sesuai untuk sistem operasi Anda:
+
+* **Windows**: Klik dua kali file `install.bat`.
+* **Linux / macOS**: Jalankan skrip `install.sh` dengan perintah berikut di terminal:
+    ```bash
+    # Jadikan skrip bisa dieksekusi (hanya perlu dilakukan sekali)
+    chmod +x install.sh
+    ```
+    ```bash
+    # Jalankan skrip
+    ./install.sh
+    ```
+* **(Alternatif Manual)**: Jika Anda lebih suka cara manual, jalankan 
+  ```bash
+    pip install -r requirements.txt
+  ```
+### Langkah 3: Siapkan `paths.txt`
+Isi file `paths.txt` dengan daftar lengkap *path* direktori yang ingin Anda kelola. Pastikan setiap *path* mengandung kata kunci `Token` atau `PrivateKey`.
 
 ---
 
 ## 💻 Cara Menjalankan Program
 
-Setelah instalasi selesai, jalankan aplikasi dengan perintah:
+Setelah instalasi selesai, jalankan aplikasi dari dalam folder proyek dengan perintah:
 ```bash
+# Untuk Windows
 python main.py
 ```
-- Anda akan melihat menu pilihan.
-- Masukkan **angka** pilihan Anda (1-4), lalu tekan **Enter**.
-- Ikuti instruksi yang muncul di layar.
+```bash
+# Untuk Linux / macOS
+python3 main.py
+```
+* Anda akan melihat menu pilihan.
+* Masukkan **angka** pilihan Anda (1-4), lalu tekan **Enter**.
 
 ---
 
 ## 📁 Struktur Proyek
 ```
-📁 AutoPath/
-├── 📜 main.py         # Skrip utama yang berisi semua logika
-├── 📜 paths.txt       # Daftar path direktori Anda
-├── 📜 requirements.txt# Daftar package untuk instalasi
-└── 🦇 install.bat     # Skrip instalasi untuk Windows
+📁 AutoPath-TabWindow/
+├── 📜 main.py
+├── 📜 paths.txt
+├── 📜 requirements.txt
+├── 🦇 install.bat
+└── 🐧 install.sh
 ```
