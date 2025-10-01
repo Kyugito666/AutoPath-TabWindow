@@ -1,0 +1,6 @@
+# File: requirements.txt
+# Daftar package yang dibutuhkan untuk PowerShell Auto-Tab Manager
+
+py-cui==0.1.6
+PyAutoGUI==0.9.54
+windows-curses==2.3.2
